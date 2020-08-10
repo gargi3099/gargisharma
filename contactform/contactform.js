@@ -93,6 +93,7 @@ jQuery(document).ready(function($POST) {
     var action = $(this).attr('action');
     if( ! action ) {
       action = 'https://formspree.io/xvowyklv';
+      alert("Message sent! Thank you!");
     }
     $.ajax({
       type: "POST",
