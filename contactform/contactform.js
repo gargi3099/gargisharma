@@ -6,7 +6,7 @@ jQuery(document).ready(function($POST) {
     var f = $(this).find('.form-group'),
       ferror = false,
       emailExp = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
-
+      
     f.children('input').each(function() { // run all inputs
 
       var i = $(this); // current input
@@ -104,6 +104,9 @@ jQuery(document).ready(function($POST) {
           $("#sendmessage").addClass("show");
           $("#errormessage").removeClass("show");
           $('.contactForm').find("input, textarea").val("");
+          alert("Message sent! Thank you!");
+          $('form.contactForm')[0].reset();
+
         } else {
           $("#sendmessage").removeClass("show");
           $("#errormessage").addClass("show");
@@ -111,8 +114,10 @@ jQuery(document).ready(function($POST) {
         }
 
       }
+
     });
     return false;
+    
   });
 
 });
