@@ -28,9 +28,11 @@
     }
     
     if($success) {
-              echo "<p><strong>Thank you for getting in touch. Expect to hear back from us soon.</strong></p>";
+         alert("Message sent! Thank you!");
+          //     echo "<p><strong>Thank you for getting in touch. Expect to hear back from us soon.</strong></p>";
          } else {
-              echo "<strong>Error sending email! </strong>";
+          alert("Error sending message");
+          //     echo "<strong>Error sending email! </strong>";
          }
     }
 
