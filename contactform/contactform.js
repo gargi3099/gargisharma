@@ -92,7 +92,7 @@ jQuery(document).ready(function($POST) {
     else var str = $(this).serialize();
     var action = $(this).attr('action');
     if( ! action ) {
-      action = 'contactform/contactform.php';
+      action = 'https://formspree.io/xvowyklv';
     }
     $.ajax({
       type: "POST",
