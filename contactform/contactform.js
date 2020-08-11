@@ -105,8 +105,8 @@ jQuery(document).ready(function($POST) {
           $("#sendmessage").addClass("show");
           $("#errormessage").removeClass("show");
           $('.contactForm').find("input, textarea").val("");
-          alert("Message sent! Thank you!");
-          $('form.contactForm')[0].reset();
+         // alert("Message sent! Thank you!");
+          //$('form.contactForm')[0].reset();
 
         } else {
           $("#sendmessage").removeClass("show");
