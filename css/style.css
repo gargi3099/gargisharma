@@ -311,12 +311,12 @@ nav ul li a {
 #about .about-descr .p-heading {
   font-family: 'Playfair Display', serif;
   font-size: 28px;
-  text-align: center;
+  text-align: justify;
 }
 
 #about .about-descr .separator {
-  max-width: 80%;
-  margin-left: 50px;
+  max-width:  100%;
+  margin-left: 0px;
   margin-bottom: 0;
   text-align:justify;
 }
