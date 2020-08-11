@@ -1,4 +1,4 @@
-jQuery(document).ready(function($POST) {
+jQuery(document).ready(function($) {
   "use strict";
 
   //Contact
@@ -6,7 +6,7 @@ jQuery(document).ready(function($POST) {
     var f = $(this).find('.form-group'),
       ferror = false,
       emailExp = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
-      
+
     f.children('input').each(function() { // run all inputs
 
       var i = $(this); // current input
@@ -93,21 +93,17 @@ jQuery(document).ready(function($POST) {
     var action = $(this).attr('action');
     if( ! action ) {
       action = 'https://formspree.io/xvowyklv';
-      //alert("Message sent! Thank you!");
     }
     $.ajax({
       type: "POST",
       url: action,
       data: str,
       success: function(msg) {
-        alert(msg);
+        // alert(msg);
         if (msg == 'OK') {
           $("#sendmessage").addClass("show");
           $("#errormessage").removeClass("show");
           $('.contactForm').find("input, textarea").val("");
-         // alert("Message sent! Thank you!");
-          //$('form.contactForm')[0].reset();
-
         } else {
           $("#sendmessage").removeClass("show");
           $("#errormessage").addClass("show");
@@ -115,10 +111,8 @@ jQuery(document).ready(function($POST) {
         }
 
       }
-
     });
     return false;
-    
   });
 
 });
