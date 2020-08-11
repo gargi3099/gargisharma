@@ -39,15 +39,15 @@
         // HTML Message Ends here
          
         // Always set content-type when sending HTML email
-        $headers = "MIME-Version: 1.0" . "\r\n";
-        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
- 
+        //$headers = "MIME-Version: 1.0" . "\r\n";
+        //$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+        $headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
         // More headers
-       // $headers .= 'From: Admin <gargi3099@gmail.com.com>' . "\r\n"; // Give an email id on which you want get a reply. User will get a mail from this email id
-        //$headers .= 'Cc: info@websapex.com' . "\r\n"; // If you want add cc
+        $headers .= 'From: Admin <gargi3099@gmail.com.com>' . "\r\n"; // Give an email id on which you want get a reply. User will get a mail from this email id
+        $headers .= 'Cc: milindsingh98@gmail.com' . "\r\n"; // If you want add cc
         //$headers .= 'Bcc: boss@websapex.com' . "\r\n"; // If you want add Bcc
          
-        if(mail($to,$subject,$message,$headers)){
+        if(mail($to,$subject,$msg,$headers)){
             // Message if mail has been sent
             echo "<script>
                     alert('Mail has been sent Successfully.');
