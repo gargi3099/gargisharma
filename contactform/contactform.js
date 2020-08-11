@@ -1,3 +1,4 @@
+header('Access-Control-Allow-Origin: *');
 jQuery(document).ready(function($) {
   "use strict";
 
